@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  postgres:
+    image: "mdillon/postgis:9.6"
+    container_name: "dataup"
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_ROOT_USER: root
+      POSTGRES_PASSWORD: rootsh
+      POSTGRES_DB: dev

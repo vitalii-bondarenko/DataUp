@@ -1,0 +1,46 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Property {
+     id       Int    @id @default(autoincrement())
+}
+
+model Auction {
+     id       Int    @id @default(autoincrement())
+     externalId Int
+}
+
+model Lot {
+     id       Int    @id @default(autoincrement())
+     externalId Int
+     contractType LotType
+     status LotStatus
+     resultStatus ResultStatus?
+}
+
+model Executor {
+     id       Int    @id @default(autoincrement())
+}
+
+enum LotType {
+    SALE
+    LEASE
+}
+
+enum LotStatus {
+    IN_PROGRESS
+    FINISHED
+}
+
+enum ResultStatus {
+    SUCCESS
+}

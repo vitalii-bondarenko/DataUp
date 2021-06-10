@@ -1,0 +1,17 @@
+{
+  "name": "dataup",
+  "version": "1.0.0",
+  "main": "src/itemsArrayExtractor.ts",
+  "author": "Vitalii <bondarenko.vs@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "^2.24.1",
+    "@types/cheerio": "^0.22.29",
+    "@types/node": "^15.6.2",
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.9",
+    "prisma": "^2.24.0",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
+  }
+}
